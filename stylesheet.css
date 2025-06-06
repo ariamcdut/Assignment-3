@@ -227,6 +227,10 @@ main input {
     padding: 0.5%;
 }
 
+.shoppingitem h3 {
+    font-size: 1em;
+}
+
 .itemimage {
     position: relative;
     width: 22vw;
@@ -289,6 +293,112 @@ main input {
 
 }
 
+/*  User Page */
+
+#user-page {
+    padding-top: 15vh;
+    background-image: url(background3.png);
+
+}
+
+#user-page header {
+    text-align: center;
+}
+
+#userpage-parent {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+/*  Left side - User details and image */
+
+#userdetails {
+    display: flex;
+    background-color: #1e1e1e;
+    width: 35vw;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+    padding-left: 5%;
+}
+
+#userdetails h3 {
+    font-size: 1em;
+    text-align: left;
+}
+
+#userdetails p {
+    font-size: 0.9em;
+    text-align: left;
+}
+
+#userdetails-right {
+    justify-content: center;
+    text-align: center;
+}
+
+#userimage {
+    width: 25vw;
+}
+
+#userimage img {
+    width: 80%;
+}
+
+#userimage-button {
+    padding-top: 2%;
+    width: 25vw;
+}
+
+#userdetails button {
+    width: 10vw;
+    background-color: #b8402f;
+    color: white;
+    height: 2vw;
+    font-family: 'Poppins';
+    font-size: 0.8em;
+}
+
+/* User access section */
+
+#useraccess {
+    width: 45vw;
+    justify-content: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.useraccess-button1 {
+    background-color: #1e1e1e;
+    width: 20vw;
+    height: 30vh;
+    color: white;
+    font-family: 'Poppins';
+    
+}
+
+.useraccess-button2 {
+    background-color: #8a7f6e;
+    width: 20vw;
+    height: 30vh;
+    color: fefefe;
+    font-family: 'Poppins';
+    
+}
+
+.useraccess-button1:hover {
+    background-color: #fefefe;
+    color: #131313;
+}
+
+.useraccess-button2:hover {
+    background-color: #b8402f;
+    color: #fefefe;
+}
+
+
+/* Footer */
 
 /* Footer */
 
