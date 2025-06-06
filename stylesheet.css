@@ -126,10 +126,6 @@ nav a:hover {
 
 /* Getting started page */
 
-main {
-    width: 100vw;
-}
-
 #gettingstarted {
     background-image: url('background4.png');
     height: 50vw;
@@ -150,7 +146,14 @@ main {
     background-color: #8a7f6e;
     color: white;
     text-decoration: none;
-    border-radius: 10%;
+    font-family: 'Poppins';
+    font-size: 0.8em;
+    border-radius: 5%;
+}
+
+#selfbrowsebutton:hover {
+    background-color: #1e1e1e;
+    color: white;
 }
 
 #shoppingdescription-input {
@@ -167,6 +170,49 @@ main {
     padding-right: 1.2%;
     border-radius: 50%;
     margin-left: 0.5vw;
+}
+
+#shoppingdescription-input a:hover {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Shopping Page */
+
+#shoppingpage-header {
+    margin-top: 4%;
+    background-color: #131313;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+#shoppingrow1 {
+    padding-top: 15%;
+}
+
+.shoppingrow {
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+
+.shoppingitem {
+    display: flexbox;
+    width: 22vw;
+    padding: 0.5%;
+}
+
+.itemimage {
+    width: 22vw;
+    height: 50vh;
+}
+
+.shoppingitem img {
+    width: 80%;
 }
 
 /* Footer */
