@@ -32,111 +32,189 @@
             </div>
         </ul>
     </nav>
-    <main>
+    <main id="shoppingpage">
         <header id="shoppingpage-header">
-            <h2>We think you might like:</h2>
-            <form action="/search" method="get" class="search-form">
-                <input 
-                    type="search"
-                    id="search-input"
-                    name="search"
-                    placeholder="e.g. pink"
-                    >
-                <button type="submit">
-                    <i class="fa-solid fa-search"></i>
-                </button>
-            </form>
+            <div>
+                <select id="category">
+                    <option value="all">Browse All</option>
+                    <option value="perfume">Perfume</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="bags">Bags</option>
+                    <option value="Bar">Bar</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="garden">Garden</option>
+                </select>
+            </div>
+            <div id="header-title">
+                <h2>We think you might like:</h2>
+            </div>
+            <div>
+                <form action="/search" method="get" class="search-form">
+                    <input 
+                        type="search"
+                        id="search-input"
+                        name="search"
+                        placeholder="e.g. pink"
+                        >
+                    <button type="submit">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </header>
         <section>
             <div class="shoppingrow" id="shoppingrow1">
                 <div class="shoppingitem" data-category="perfume">
-                    <div class="itemimage"><img src="Item Images/Acca Kappa 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Acca Kappa 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Acca Kappa 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Acca Kappa 'Black Pepper and Sandalwood' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
                 </div>
                 <div class="shoppingitem" data-category="perfume">
-                    <div class="itemimage"><img src="Item Images/Acca Kappa Glichene 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Acca Kappa Glichene 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Acca Kappa Glichene 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Acca Kappa 'Glicine' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
                 </div>
                 <div class="shoppingitem" data-category="accessories">
-                    <div class="itemimage"><img src="Item Images/Cufflinks 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Cufflinks 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Cufflinks 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Cufflinks Round Stainless Steel</h3>
                     <p>$119.95</p>
                 </div>
                 <div class="shoppingitem" data-category="accessories">
-                    <div class="itemimage"><img src="Item Images/Dents 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Dents 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Dents 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Dents - Abercairney Touchscreen Gloves</h3>
                     <p>$299.95</p>
                 </div>
             </div>
             <div class="shoppingrow">
                 <div class="shoppingitem" data-category="bags">
-                    <div class="itemimage"><img src="Item Images/Document Holder 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Document Holder 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Document Holder 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>All The Kings Men - Document Holder Brown</h3>
                     <p>$174.95</p>
                 </div>
                 <div class="shoppingitem" data-category="bags">
-                    <div class="itemimage"><img src="Item Images/Orange Bag 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Orange Bag 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Orange Bag 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>All The Kings Men - Travel Utility Brown</h3>
                     <p>$144.95</p>
                 </div>
                 <div class="shoppingitem" data-category="bags">
-                    <div class="itemimage"><img src="Item Images/OH Harper Tote 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/OH Harper Tote 1.png" alt="" class="mainimage">
+                        <img src="Item Images/OH Harper Tote 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Justin OH Harper Tote</h3>
                     <p>$139.95</p>
                 </div>
                 <div class="shoppingitem" data-category="bar">
-                    <div class="itemimage"><img src="Item Images/Flask 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Flask 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Flask 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Wentworth Pewter Flask 6oz Pocket</h3>
                     <p>$159.95</p>
                 </div>
             </div>
             <div class="shoppingrow">
                 <div class="shoppingitem" data-category="clothes">
-                    <div class="itemimage"><img src="Item Images/Saint James Long Sleeve 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Saint James Long Sleeve 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Saint James Long Sleeve 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Saint James Long Sleeve T-shirt</h3>
                     <p>$149.95</p>
                 </div>
                 <div class="shoppingitem" data-category="garden">
-                    <div class="itemimage"><img src="Item Images/Garden Set 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Garden Set 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Garden Set 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>DeWit Garden Gift Set 3 Piece</h3>
                     <p>$149.95</p>
                 </div>
                 <div class="shoppingitem" data-category="garden">
-                    <div class="itemimage"><img src="Item Images/Copper Watering Can 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Copper Watering Can 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Copper Watering Can 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Haws Watering Can 0.5 Litre Copper</h3>
                     <p>$129.95</p>
                 </div>
-                <div class="shoppingitem" data-category="accessories">
-                    <div class="itemimage"><img src="Item Images/Galvanised Watering Can 1.png" alt=""></div>
+                <div class="shoppingitem" data-category="garden">
+                    <div class="itemimage">
+                        <img src="Item Images/Galvanised Watering Can 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Galvanised Watering Can 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Haws Watering Can 0.5 Litre Galvanised</h3>
                     <p>$89.95</p>
                 </div>
             </div>
             <div class="shoppingrow">
                 <div class="shoppingitem" data-category="perfume">
-                    <div class="itemimage"><img src="Item Images/Acca Kappa 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Acca Kappa 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Acca Kappa 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Acca Kappa 'Black Pepper and Sandalwood' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
                 </div>
                 <div class="shoppingitem" data-category="perfume">
-                    <div class="itemimage"><img src="Item Images/Acca Kappa Glichene 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Acca Kappa Glichene 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Acca Kappa Glichene 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Acca Kappa 'Glicine' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
                 </div>
                 <div class="shoppingitem" data-category="accessories">
-                    <div class="itemimage"><img src="Item Images/Cufflinks 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Cufflinks 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Cufflinks 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Cufflinks Round Stainless Steel</h3>
                     <p>$119.95</p>
                 </div>
                 <div class="shoppingitem" data-category="accessories">
-                    <div class="itemimage"><img src="Item Images/Dents 1.png" alt=""></div>
+                    <div class="itemimage">
+                        <img src="Item Images/Dents 1.png" alt="" class="mainimage">
+                        <img src="Item Images/Dents 2.png" alt="" class="hoverimage">
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
                     <h3>Dents - Abercairney Touchscreen Gloves</h3>
                     <p>$299.95</p>
                 </div>
             </div>
-            
         </section>
 
     </main>
