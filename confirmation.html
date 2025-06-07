@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR WARES: Your Cart</title>
+    <title>MR WARES: Confirmation</title>
 
     <!-- Added Links -->
      <link rel="stylesheet" href="stylesheet.css">
@@ -18,9 +18,9 @@
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/e96d6d78ca.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
+    <body>
     <!--Navigation-->
     <nav>
         <ul>
@@ -38,49 +38,12 @@
             </div>
         </ul>
     </nav>
-    <main class="cartpage">
-        <header>
-            <h3>Your Shopping Cart</h3>
-        </header>
-        <section class="cartitems" id="cart-items-container">
-            <p id="empty-cart-message">Your cart is empty.</p>
-        </section>
-        <section class="cartsummary">
-            <div class="cart-details">
-                <p>Total Items: <span id="totalitems">0</span></p>
-                <p id="cart-total-price">Cart Total = $0.00</p>
-            </div>
-            <div class="cartnavigation">
-                <a href="shopping.html" id="continue-shopping-button" >Continue Shopping</a>
-                <button id="empty-cart-btn" class="secondary-btn">Empty Cart</button>
-                <button id="checkoutbutton">Proceed to checkout</button>
-            </div>
-        </section>
+    <main class="confirmation">
+        <h1><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h1>
+        <h1>Thankyou for your purchase!</h1>
+        <h3>You can close this browser now.</h3>
+        <a href="shopping.html">Or continue shopping.</a>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // FIX: Get the buttons here, once, as they are not dynamically re-created
-            const emptyCartButton = document.getElementById('empty-cart-btn');
-            const checkoutButton = document.getElementById('checkoutbutton');
-
-            // FIX: Attach event listeners to these buttons only once
-            if (emptyCartButton) {
-                emptyCartButton.addEventListener('click', emptyCart);
-            }
-
-            if (checkoutButton) {
-                checkoutButton.addEventListener('click', () => {
-                    if (Object.keys(cart).length > 0) {
-                        window.location.href = 'paymentanddelivery.html';
-                    } else {
-                        alert('Your cart is empty. Please add items before checking out.');
-                    }
-                });
-            }
-
-            window.renderCartPage(); 
-        });
-    </script>
     <footer>
         <!-- Footer -->
         <div>

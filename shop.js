@@ -1,10 +1,13 @@
 let cart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
 
+//Save cart function: saves the cart after every action so the customer can go to different pages and the progress is saved.
 
 function saveCart() {
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
     updateCartCountDisplay(); 
 }
+
+// Stores the product Ids and the corresponding details in the cart. 
 
 function addToCart(productId, name, price, imageUrl) {
     if (cart[productId]) {
@@ -22,6 +25,7 @@ function addToCart(productId, name, price, imageUrl) {
     alert(`${name} added to cart!`);
 }
 
+// Changes the quantity of an item in the cart.  
 
 function updateQuantity(productId, change) {
     if (cart[productId]) {
@@ -38,6 +42,7 @@ function updateQuantity(productId, change) {
     }
 }
 
+// Removes an item from the cart. 
 
 function removeFromCart(productId) {
     if (confirm('Are you sure you want to remove this item from your cart?')) {
@@ -53,6 +58,7 @@ function removeFromCart(productId) {
     location.reload()
 }
 
+// Removes all items from the cart. 
 
 function emptyCart() {
     if (confirm('Are you sure you want to empty your entire cart?')) {
@@ -66,6 +72,15 @@ function emptyCart() {
     }
 }
 
+// Removes all items from the cart. 
+
+function completeCart() {
+        cart = {}; 
+        saveCart();
+
+}
+
+// Updates the cart section where it shows how many items have been added.
 
 function updateCartCountDisplay() {
     const cartCountElement = document.getElementById('cart-count'); 
@@ -78,8 +93,11 @@ function updateCartCountDisplay() {
     }
 }
 
+// This function creates the actual cart page.
 
 window.renderCartPage = function() {
+
+    // Defining constants
     
     const cartItemsContainer = document.getElementById('cart-items-container'); 
     const cartTotalItems = document.getElementById('totalitems');
@@ -88,9 +106,10 @@ window.renderCartPage = function() {
     const emptyCartBtn = document.getElementById('empty-cart-btn'); 
     const checkoutBtn = document.getElementById('checkoutbutton'); 
 
+    // Debugging using console
+
     if (!cartItemsContainer || !cartTotalItems || !cartTotalPrice || !emptyCartMessage || !emptyCartBtn || !checkoutBtn) {
         console.error("Critical: One or more required cart page elements not found. Please check your HTML IDs in cart.html.");
-        // Log specific missing elements for easier debugging
         if (!cartItemsContainer) console.error("Missing ID: 'cart-items-container'");
         if (!cartTotalItems) console.error("Missing ID: 'totalitems'");
         if (!cartTotalPrice) console.error("Missing ID: 'cart-total-price'");
@@ -99,6 +118,8 @@ window.renderCartPage = function() {
         if (!checkoutBtn) console.error("Missing ID: 'checkoutbutton'");
         return; 
     }
+
+    // Initial display of the page (based on if the cart has 0 or + items in it)
 
     cartItemsContainer.innerHTML = ''; 
     let totalItems = 0;
@@ -119,6 +140,8 @@ window.renderCartPage = function() {
         checkoutBtn.style.display = 'inline-block';
     }
 
+    // Creating the display table. 
+
     const cartTable = document.createElement('table');
     cartTable.classList.add('cart-table');
     cartTable.innerHTML = `
@@ -133,6 +156,8 @@ window.renderCartPage = function() {
         </thead>
         <tbody></tbody>
     `;
+
+    // Working out the values based on the data from the product Id and displaying it appropriately 
 
     const cartTableBody = cartTable.querySelector('tbody');
 
@@ -159,10 +184,14 @@ window.renderCartPage = function() {
         cartTableBody.appendChild(row);
     }
 
+    // Appends the created table to the cart items container (which is initially empty to start with.) 
+
     cartItemsContainer.appendChild(cartTable); 
 
     cartTotalItems.textContent = totalItems; 
     cartTotalPrice.textContent = `$${totalPrice.toFixed(2)}`;
+
+    // Event listeners to trigger any other functions in the event that they are clicked (and then update the cart) 
 
     cartItemsContainer.querySelectorAll('.quantity-btn.minus-btn').forEach(btn => {
         btn.addEventListener('click', (e) => updateQuantity(e.target.dataset.productId, -1));
@@ -174,10 +203,11 @@ window.renderCartPage = function() {
         btn.addEventListener('click', (e) => removeFromCart(e.target.dataset.productId));
     });
 
+    // Checkout button (proceed to the next step)
 
     checkoutBtn.onclick = () => { 
         if (Object.keys(cart).length > 0) {
-            alert('Proceeding to checkout! (This is a frontend demo)');
+            alert('Proceeding to checkout!');
         } else {
             alert('Your cart is empty. Please add items before checking out.');
         }
