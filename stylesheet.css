@@ -401,9 +401,148 @@ main input {
 /* Cart Page */
 .cartpage {
     padding-top: 15vh;
+    text-align: center;
+    background-image: url(background3.png);
+}
+
+.cart-table {
+    width: 75%; 
+    margin: 20px auto; 
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.cart-table tr {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hiden;
+    font-family: 'Poppins';
+    font-size: 0.8em;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.cart-table td:nth-child(1) { 
+    width: 35%; 
+    white-space: normal; 
+    word-wrap: break-word; 
+    text-align: left; 
 }
 
 
+.cart-item-image {
+    width: 30%; 
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.quantity-btn {
+    background-color: #8a7f6e; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 0 2px;
+}
+
+.quantity-btn:hover {
+    background-color: #b8402f; 
+}
+
+.item-quantity { 
+    display: inline-block;
+    min-width: 25px; 
+    text-align: center;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.remove-btn { 
+    background-color: #b8402f; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.remove-btn:hover {
+    background-color: #131313; 
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+.cart-summary { 
+    width: 75%; 
+    margin: 5%; 
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: right; 
+}
+
+.cart-details {
+    text-align: right;
+    padding-right: 15%;
+}
+
+.cartnavigation {
+    padding-bottom: 5%;
+    width: 100%;
+}
+
+.cartnavigation button {
+    width: 15vw;
+    height: 5vh;
+    font-family: 'Poppins';
+}
+
+#continue-shopping-button {
+    background-color: #fefefe;
+    color: #1e1e1e;
+    text-decoration: none;
+    padding: 0.3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-family: 'Poppins';
+    font-size: 0.8em;
+    
+}
+
+#continue-shopping-button:hover {
+    background-color: #8a7f6e;
+    color: #fefefe;
+    
+}
+
+#empty-cart-btn {
+    background-color: #b8402f;
+    color: #fefefe;
+}
+
+#empty-cart-btn:hover {
+    background-color: #923124;
+}
+
+#checkoutbutton {
+    background-color: #1e1e1e;
+    color: #fefefe;
+}
+
+#checkoutbutton:hover {
+    background-color: #000000;
+}
 
 /* Footer */
 

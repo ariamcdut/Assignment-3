@@ -34,6 +34,7 @@ function updateQuantity(productId, change) {
         if (document.getElementById('cart-items-container')) { 
             window.renderCartPage(); 
         }
+    location.reload()
     }
 }
 
@@ -42,11 +43,14 @@ function removeFromCart(productId) {
     if (confirm('Are you sure you want to remove this item from your cart?')) {
         delete cart[productId];
         saveCart();
+        location.reload()
 
         if (document.getElementById('cart-items-container')) {
             window.renderCartPage(); 
+            location.reload()
         }
-    }
+    } 
+    location.reload()
 }
 
 
@@ -58,6 +62,7 @@ function emptyCart() {
         if (document.getElementById('cart-items-container')) {
             window.renderCartPage(); 
         }
+    location.reload()
     }
 }
 
@@ -84,7 +89,14 @@ window.renderCartPage = function() {
     const checkoutBtn = document.getElementById('checkoutbutton'); 
 
     if (!cartItemsContainer || !cartTotalItems || !cartTotalPrice || !emptyCartMessage || !emptyCartBtn || !checkoutBtn) {
-        console.error("One or more required cart page elements not found. Please check your HTML IDs.");
+        console.error("Critical: One or more required cart page elements not found. Please check your HTML IDs in cart.html.");
+        // Log specific missing elements for easier debugging
+        if (!cartItemsContainer) console.error("Missing ID: 'cart-items-container'");
+        if (!cartTotalItems) console.error("Missing ID: 'totalitems'");
+        if (!cartTotalPrice) console.error("Missing ID: 'cart-total-price'");
+        if (!emptyCartMessage) console.error("Missing ID: 'empty-cart-message'");
+        if (!emptyCartBtn) console.error("Missing ID: 'empty-cart-btn'");
+        if (!checkoutBtn) console.error("Missing ID: 'checkoutbutton'");
         return; 
     }
 
@@ -143,7 +155,7 @@ window.renderCartPage = function() {
                 <button class="quantity-btn minus-btn" data-product-id="${productId}">-</button>
                 <span class="item-quantity">${item.quantity}</span> <button class="quantity-btn plus-btn" data-product-id="${productId}">+</button>
             </td>
-            <td>$${itemSubtotal.toFixed(2)}</td> <td><button class="remove-btn" data-product-id="${productId}">Remove</button></td> `;
+            <td>$${itemSubtotal.toFixed(2)}</td> <td><button class="remove-btn" data-product-id="${productId}"><i class="fa-solid fa-dumpster"></i></button></td> `;
         cartTableBody.appendChild(row);
     }
 
