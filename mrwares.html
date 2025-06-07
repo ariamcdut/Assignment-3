@@ -7,6 +7,7 @@
 
     <!-- Added Links -->
      <link rel="stylesheet" href="stylesheet.css">
+     <script src="shop.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +22,19 @@
 
 </head>
 <body>
+    <!--Navigation-->
     <nav>
-        <!-- Navigation-->
         <ul>
             <div style="padding-right: 86vw;">
                 <li id="homeicon"><a href="mrwares.html"><i class="fa-solid fa-house"></i></a></li>
             </div>
             <div>
-                <li style="padding-right: 1vw;"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li style="padding-right: 1vw;">
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span> 
+                    </a>
+                </li>
                 <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
             </div>
         </ul>

@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MR WARES: Shopping</title>
 
-    <!-- Added Links -->
-     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
     <script src="https://kit.fontawesome.com/e96d6d78ca.js" crossorigin="anonymous"></script>
+    <script src="shop.js"></script> 
 
 </head>
 <body>
     <nav>
-        <!-- Navigation-->
         <ul>
             <div style="padding-right: 86vw;">
                 <li id="homeicon"><a href="mrwares.html"><i class="fa-solid fa-house"></i></a></li>
             </div>
             <div>
-                <li style="padding-right: 1vw;"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li style="padding-right: 1vw;">
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span> 
+                    </a>
+                </li>
                 <li><a href="user.html"><i class="fa-solid fa-user"></i></a></li>
             </div>
         </ul>
@@ -68,7 +70,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Acca Kappa 1.png" alt="" class="mainimage">
                         <img src="Item Images/Acca Kappa 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn" data-product-id="perfume001"
+                            data-product-name="Acca Kappa 'Black Pepper and Sandalwood' Travel Eau de Parfum 15ml"
+                            data-product-price="49.95"
+                            data-product-image="Item Images/Acca Kappa 1.png" >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Acca Kappa 'Black Pepper and Sandalwood' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
@@ -77,7 +85,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Acca Kappa Glichene 1.png" alt="" class="mainimage">
                         <img src="Item Images/Acca Kappa Glichene 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn" data-product-id="perfume002" data-product-name="Acca Kappa 'Glicine' Travel Eau de Parfum 15ml"
+                            data-product-price="49.95"
+                            data-product-image="Item Images/Acca Kappa Glichene 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Acca Kappa 'Glicine' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
@@ -86,7 +100,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Cufflinks 1.png" alt="" class="mainimage">
                         <img src="Item Images/Cufflinks 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn" data-product-id="cufflinks001" data-product-name="Cufflinks Round Stainless Steel"
+                            data-product-price="119.95"
+                            data-product-image="Item Images/Cufflinks 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Cufflinks Round Stainless Steel</h3>
                     <p>$119.95</p>
@@ -95,7 +115,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Dents 1.png" alt="" class="mainimage">
                         <img src="Item Images/Dents 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn" data-product-id="gloves001" data-product-name="Dents - Abercairney Touchscreen Gloves"
+                            data-product-price="299.95"
+                            data-product-image="Item Images/Dents 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Dents - Abercairney Touchscreen Gloves</h3>
                     <p>$299.95</p>
@@ -106,7 +132,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Document Holder 1.png" alt="" class="mainimage">
                         <img src="Item Images/Document Holder 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn" 
+                            data-product-id="doc-holder001"
+                            data-product-name="All The Kings Men - Document Holder Brown"
+                            data-product-price="174.95"
+                            data-product-image="Item Images/Document Holder 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>All The Kings Men - Document Holder Brown</h3>
                     <p>$174.95</p>
@@ -115,7 +147,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Orange Bag 1.png" alt="" class="mainimage">
                         <img src="Item Images/Orange Bag 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="travel-utility001"
+                            data-product-name="All The Kings Men - Travel Utility Brown"
+                            data-product-price="144.95"
+                            data-product-image="Item Images/Orange Bag 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>All The Kings Men - Travel Utility Brown</h3>
                     <p>$144.95</p>
@@ -124,7 +162,13 @@
                     <div class="itemimage">
                         <img src="Item Images/OH Harper Tote 1.png" alt="" class="mainimage">
                         <img src="Item Images/OH Harper Tote 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="harper-tote001"
+                            data-product-name="Justin OH Harper Tote"
+                            data-product-price="139.95"
+                            data-product-image="Item Images/OH Harper Tote 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>Justin OH Harper Tote</h3>
                     <p>$139.95</p>
@@ -133,7 +177,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Flask 1.png" alt="" class="mainimage">
                         <img src="Item Images/Flask 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="pewter-flask001"
+                            data-product-name="Wentworth Pewter Flask 6oz Pocket"
+                            data-product-price="159.95"
+                            data-product-image="Item Images/Flask 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>Wentworth Pewter Flask 6oz Pocket</h3>
                     <p>$159.95</p>
@@ -144,7 +194,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Saint James Long Sleeve 1.png" alt="" class="mainimage">
                         <img src="Item Images/Saint James Long Sleeve 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="st-james-tshirt001"
+                            data-product-name="Saint James Long Sleeve T-shirt"
+                            data-product-price="149.95"
+                            data-product-image="Item Images/Saint James Long Sleeve 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>Saint James Long Sleeve T-shirt</h3>
                     <p>$149.95</p>
@@ -153,7 +209,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Garden Set 1.png" alt="" class="mainimage">
                         <img src="Item Images/Garden Set 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="garden-set001"
+                            data-product-name="DeWit Garden Gift Set 3 Piece"
+                            data-product-price="149.95"
+                            data-product-image="Item Images/Garden Set 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>DeWit Garden Gift Set 3 Piece</h3>
                     <p>$149.95</p>
@@ -162,7 +224,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Copper Watering Can 1.png" alt="" class="mainimage">
                         <img src="Item Images/Copper Watering Can 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="copper-can001"
+                            data-product-name="Haws Watering Can 0.5 Litre Copper"
+                            data-product-price="129.95"
+                            data-product-image="Item Images/Copper Watering Can 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>Haws Watering Can 0.5 Litre Copper</h3>
                     <p>$129.95</p>
@@ -171,7 +239,13 @@
                     <div class="itemimage">
                         <img src="Item Images/Galvanised Watering Can 1.png" alt="" class="mainimage">
                         <img src="Item Images/Galvanised Watering Can 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="galvanised-can001"
+                            data-product-name="Haws Watering Can 0.5 Litre Galvanised"
+                            data-product-price="89.95"
+                            data-product-image="Item Images/Galvanised Watering Can 1.png"
+                        >Add to cart</button>
                     </div>
                     <h3>Haws Watering Can 0.5 Litre Galvanised</h3>
                     <p>$89.95</p>
@@ -182,7 +256,15 @@
                     <div class="itemimage">
                         <img src="Item Images/Acca Kappa 1.png" alt="" class="mainimage">
                         <img src="Item Images/Acca Kappa 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="perfume001-dup"
+                            data-product-name="Acca Kappa 'Black Pepper and Sandalwood' Travel Eau de Parfum 15ml (Duplicate)"
+                            data-product-price="49.95"
+                            data-product-image="Item Images/Acca Kappa 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Acca Kappa 'Black Pepper and Sandalwood' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
@@ -191,7 +273,15 @@
                     <div class="itemimage">
                         <img src="Item Images/Acca Kappa Glichene 1.png" alt="" class="mainimage">
                         <img src="Item Images/Acca Kappa Glichene 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="perfume002-dup"
+                            data-product-name="Acca Kappa 'Glicine' Travel Eau de Parfum 15ml (Duplicate)"
+                            data-product-price="49.95"
+                            data-product-image="Item Images/Acca Kappa Glichene 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Acca Kappa 'Glicine' Travel Eau de Parfum 15ml</h3>
                     <p>$49.95</p>
@@ -200,7 +290,15 @@
                     <div class="itemimage">
                         <img src="Item Images/Cufflinks 1.png" alt="" class="mainimage">
                         <img src="Item Images/Cufflinks 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="cufflinks001-dup"
+                            data-product-name="Cufflinks Round Stainless Steel (Duplicate)"
+                            data-product-price="119.95"
+                            data-product-image="Item Images/Cufflinks 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Cufflinks Round Stainless Steel</h3>
                     <p>$119.95</p>
@@ -209,7 +307,15 @@
                     <div class="itemimage">
                         <img src="Item Images/Dents 1.png" alt="" class="mainimage">
                         <img src="Item Images/Dents 2.png" alt="" class="hoverimage">
-                        <button class="add-to-cart">Add to cart</button>
+                        <button 
+                            class="add-to-cart-btn"
+                            data-product-id="gloves001-dup"
+                            data-product-name="Dents - Abercairney Touchscreen Gloves (Duplicate)"
+                            data-product-price="299.95"
+                            data-product-image="Item Images/Dents 1.png"
+                        >
+                            Add to cart
+                        </button>
                     </div>
                     <h3>Dents - Abercairney Touchscreen Gloves</h3>
                     <p>$299.95</p>
@@ -218,8 +324,24 @@
         </section>
 
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn'); 
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const productId = event.target.dataset.productId;
+                    const productName = event.target.dataset.productName;
+                    const productPrice = parseFloat(event.target.dataset.productPrice);
+
+                    const productImage = event.target.dataset.productImage; 
+
+                    addToCart(productId, productName, productPrice, productImage); 
+                });
+            });
+        });
+    </script>
     <footer>
-        <!-- Footer -->
         <div>
             <h3>About You</h3>
             <p>Your saved people</p>
